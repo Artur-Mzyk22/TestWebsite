@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elektromechanika | Auto Detailing | MOPIK</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
+    }
+
+    main {
+      flex: 1; /* Makes the main content take up all available space */
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: auto; /* Ensures the footer is at the bottom if the content is small */
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Elektromechanika | Auto Detailing | MOPIK</h1>
+  <h2>Warsztat samochodowy, Bucze</h2>
+  <img src="images/mopik.jpg" alt="Placeholder Image" />
+
+  <main>
+    <h2>Simple Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter number 1" />
+    <input type="number" id="num2" placeholder="Enter number 2" />
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <div id="result"></div>
+  </main>
+  
+  <script>
+    function calculateSum() {
+      const n1 = parseFloat(document.getElementById('num1').value);
+      const n2 = parseFloat(document.getElementById('num2').value);
+      const result = isNaN(n1) || isNaN(n2) ? 'Please enter valid numbers' : 'Result: ' + (n1 + n2);
+      document.getElementById('result').textContent = result;
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <p>Kontakt:</p>
+	<p>Adres: Grądzik, 32-800 Bucze</p>
+    <p>Telefon: 663 233 792</p>
+    <p>&copy; 2025 Hello World Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
