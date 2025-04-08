@@ -33,39 +33,330 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    .image-slider-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      margin: 20px auto;
+    }
+
+    .image-slider {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .image-slider img {
+      width: 300px;
+      height: auto;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .fancy-list-columns {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #f9f9f9;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .fancy-list-columns h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 250px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .column li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .column-1 span {
+      color: green;
+      font-size: 1.3rem;
+      margin-right: 10px;
+    }
+
+    .column-2 span {
+      color: gold;
+      font-size: 1.3rem;
+      margin-right: 10px;
+    }
+
+    .column-3 span {
+      color: #3498db;
+      font-size: 1.3rem;
+      margin-right: 10px;
+    }
+
+    .fancy-footer {
+      background: linear-gradient(135deg, #1f2937, #4b5563);
+      color: #f9fafb;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+    }
+
+    .footer-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .footer-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+    }
+
+    .call-button {
+      display: inline-block;
+      background-color: #10b981;
+      color: white;
+      padding: 12px 24px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .call-button:hover {
+      background-color: #059669;
+    }
+
+    .footer-copy {
+      font-size: 0.9rem;
+      color: #d1d5db;
+    }
+
+    .price-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .price-button:hover {
+      background-color: #45a049;
+    }
+
+    /* Title Section Styles */
+    .title-section {
+      background-color: #1c1c1c;  /* Dark background for contrast */
+      color: white;               /* Default text color */
+      padding: 50px 20px;         /* Vertical padding of 50px, horizontal 20px */
+      text-align: center;         /* Center align text */
+      border-radius: 10px;        /* Rounded corners */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Soft shadow around the section */
+      margin-bottom: 40px;        /* Space below the title section */
+      position: relative;
+    }
+
+    /* Neon Glow Animation */
+    .title-section h1 {
+      font-size: 3rem;            /* Large font size for the title */
+      font-weight: bold;
+      margin-bottom: 20px;        /* Space below the title */
+      text-transform: uppercase;  /* Make the text uppercase for a bold look */
+      letter-spacing: 2px;        /* Add some space between letters */
+      color: #ffffff;             /* White text */
+      animation: neon-glow 1.5s ease-in-out infinite alternate;
+    }
+
+    /* Neon Animation */
+    @keyframes neon-glow {
+      0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4CAF50, 0 0 30px #4CAF50, 0 0 40px #4CAF50, 0 0 50px #4CAF50, 0 0 75px #4CAF50;
+      }
+      50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #4CAF50, 0 0 40px #4CAF50, 0 0 50px #4CAF50, 0 0 75px #4CAF50, 0 0 100px #4CAF50;
+      }
+      100% {
+        text-shadow: 0 0 15px #fff, 0 0 30px #fff, 0 0 45px #4CAF50, 0 0 60px #4CAF50, 0 0 80px #4CAF50, 0 0 100px #4CAF50, 0 0 150px #4CAF50;
+      }
+    }
+
+    /* Subtle animation for paragraph */
+    .title-section p {
+      font-size: 1.2rem;  /* Slightly larger text for description */
+      line-height: 1.5;    /* Space between lines for readability */
+      animation: fade-in 2s ease-out;
+    }
+
+    /* Fade-in animation for paragraph */
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Elektromechanika | Auto Detailing | MOPIK</h1>
-  <h2>Warsztat samochodowy, Bucze</h2>
-  <img src="images/mopik.jpg" alt="Placeholder Image" />
-
+  <section class="title-section">
+    <h1>Elektromechanika | Auto Detailing | MOPIK</h1>
+    <h2>Warsztat samochodowy, Bucze</h2>
+    <h2>Kompleksowa elektromechanika pojazdowa</h2>
+  </section>
+  
   <main>
-    <h2>Simple Calculator</h2>
-    <input type="number" id="num1" placeholder="Enter number 1" />
-    <input type="number" id="num2" placeholder="Enter number 2" />
-    <button onclick="calculateSum()">Calculate Sum</button>
-    <div id="result"></div>
+    <section class="fancy-list-columns">
+      <h2>Czym się zajmujemy?</h2>
+      <a href="prices.html" class="price-button">💲 Zobacz Cennik</a>
+      <div class="columns">
+        <ul class="column column-1">
+          <li><span>✔</span> Sprzedaż opon w hurtowej cenie</li>
+          <li><span>✔</span> Wymiana opon</li>
+          <li><span>✔</span> Wyważanie kół</li>
+          <li><span>✔</span> Blacharstwo, lakiernictwo</li>
+          <li><span>✔</span> Konserwacja podwozia</li>
+          <li><span>✔</span> Obsługa klimatyzacji</li>
+        </ul>
+        <ul class="column column-2">
+          <li><span>★</span> Diagnostyka komputerowa</li>
+          <li><span>★</span> Montaż alarmów</li>
+          <li><span>★</span> Rozrządy</li>
+          <li><span>★</span> Zawieszenia</li>
+          <li><span>★</span> Wymiana oleju</li>
+          <li><span>★</span> Hamulce</li>
+          <li><span>★</span> Naprawy bieżące</li>
+        </ul>
+        <ul class="column column-3">
+          <li><span>➤</span> Serwis CB radio (sprzedaż, montaż, naprawa)</li>
+          <li><span>➤</span> Strojenie anten</li>
+        </ul>
+      </div>
+    </section>
+    
+    <img src="images/wachlarz.jpg" alt="Image 1">
+
+    <div class="image-slider-wrapper">
+      <div class="image-slider" id="imageSlider">
+        <img src="images/mopik.jpg" alt="Image 1">
+        <img src="images/mopik.jpg" alt="Image 2">
+        <img src="images/mopik.jpg" alt="Image 3">
+        <img src="images/mopik.jpg" alt="Image 4">
+        <img src="images/mopik.jpg" alt="Image 5">
+        <img src="images/mopik.jpg" alt="Image 6">
+        <img src="images/mopik.jpg" alt="Image 7">
+        <img src="images/mopik.jpg" alt="Image 8">
+        <img src="images/mopik.jpg" alt="Image 9">
+      </div>
+      <button class="slide-btn prev" onclick="slidePrev()">&#10094;</button>
+      <button class="slide-btn next" onclick="slideNext()">&#10095;</button>
+    </div>
   </main>
   
   <script>
-    function calculateSum() {
-      const n1 = parseFloat(document.getElementById('num1').value);
-      const n2 = parseFloat(document.getElementById('num2').value);
-      const result = isNaN(n1) || isNaN(n2) ? 'Please enter valid numbers' : 'Result: ' + (n1 + n2);
-      document.getElementById('result').textContent = result;
+    let slideIndex = 0;
+    const slider = document.getElementById("imageSlider");
+    const slides = slider.querySelectorAll("img");
+
+    function slideNext() {
+      if (slideIndex < slides.length - 1) {
+        slideIndex++;
+        updateSlide();
+      }
+    }
+
+    function slidePrev() {
+      if (slideIndex > 0) {
+        slideIndex--;
+        updateSlide();
+      }
+    }
+
+    function updateSlide() {
+      const slideWidth = slides[0].clientWidth + 10; // includes margin
+      slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
     }
   </script>
 
-  <!-- Footer -->
-  <footer>
-    <p>Kontakt:</p>
-	<p>Adres: Grądzik, 32-800 Bucze</p>
-    <p>Telefon: 663 233 792</p>
-	<a href="tel:889122105">
-	  <button type="button">Zadzwoń teraz</button>
-	</a>
-    <p>&copy; 2025 Hello World Website. All rights reserved.</p>
+  <footer class="fancy-footer">
+    <div class="footer-info">
+      <div class="footer-item">
+        <span>🕒</span>
+        <p>Dostępność: <strong>24/7</strong></p>
+      </div>
+      <div class="footer-item">
+        <span>📍</span>
+        <p>Adres: <strong>Grądzik, 32-800 Bucze</strong></p>
+      </div>
+      <div class="footer-item">
+        <span>📞</span>
+        <p>Telefon: <strong>663 233 792</strong></p>
+      </div>
+      <a href="tel:663233792" class="call-button">📲 Zadzwoń</a>
+    </div>
+
+    <iframe
+      src="https://www.google.com/maps?q=50.03516621551812,20.603412042242564&hl=pl&z=14&output=embed"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
   </footer>
 </body>
 </html>
