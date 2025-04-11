@@ -251,6 +251,22 @@
         opacity: 1;
       }
     }
+
+    .star-rating {
+      display: flex;
+      direction: row;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .star {
+      color: lightgray;
+      transition: color 0.2s;
+    }
+
+    .star.shining {
+      color: gold;
+    }
   </style>
   <meta name="google-site-verification" content="LtIL_BZxW4d077_vrdvkJLFp7gcX1HRJH47921HU9Pc"/>
 </head>
@@ -307,6 +323,15 @@
       <button class="slide-btn prev" onclick="slidePrev()">&#10094;</button>
       <button class="slide-btn next" onclick="slideNext()">&#10095;</button>
     </div>
+
+    <p>Oceń usługę</p>
+    <div class="star-rating" id="ratingWidget">
+      <span class="star" data-value="1">&#9733;</span>
+      <span class="star" data-value="2">&#9733;</span>
+      <span class="star" data-value="3">&#9733;</span>
+      <span class="star" data-value="4">&#9733;</span>
+      <span class="star" data-value="5">&#9733;</span>
+    </div>
   </main>
   
   <script>
@@ -332,6 +357,27 @@
       const slideWidth = slides[0].clientWidth + 10; // includes margin
       slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
     }
+
+    const stars = document.querySelectorAll('#ratingWidget .star');
+    let rating = 0;
+
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        rating = parseInt(star.getAttribute('data-value'));
+        updateStars(rating);
+      });
+    });
+
+    function updateStars(rating) {
+      stars.forEach(star => {
+        const starValue = parseInt(star.getAttribute('data-value'));
+        if (starValue <= rating) {
+          star.classList.add('shining');
+        } else {
+          star.classList.remove('shining');
+        }
+      });
+    }
   </script>
 
   <footer class="fancy-footer">
@@ -347,8 +393,8 @@
       <div class="footer-item">
         <span>📞</span>
         <p>Telefon: <strong>663 233 792</strong></p>
+        <a href="tel:663233792" class="call-button">📲 Zadzwoń</a>
       </div>
-      <a href="tel:663233792" class="call-button">📲 Zadzwoń</a>
     </div>
 
     <iframe
